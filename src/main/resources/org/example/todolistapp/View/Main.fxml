@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.todolistapp.controller.MainController">
+    <children>
+        <TableView fx:id="todoTable" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="450.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Task" />
+                <TableColumn fx:id="statusColumn" prefWidth="175.0" text="Status" />
+            </columns>
+        </TableView>
+        <TextField fx:id="taskField" layoutX="14.0" layoutY="230.0" prefWidth="220.0" promptText="Enter Task" />
+        <TextField fx:id="statusField" layoutX="244.0" layoutY="230.0" prefWidth="220.0" promptText="Enter Status" />
+        <Button layoutX="14.0" layoutY="270.0" mnemonicParsing="false" onAction="#addTask" text="Add" />
+        <Button layoutX="74.0" layoutY="270.0" mnemonicParsing="false" onAction="#updateTask" text="Update" />
+        <Button layoutX="144.0" layoutY="270.0" mnemonicParsing="false" onAction="#deleteTask" text="Delete" />
+        <Button layoutX="214.0" layoutY="270.0" mnemonicParsing="false" onAction="#refreshTable" text="Refresh" />
+    </children>
+</AnchorPane>
